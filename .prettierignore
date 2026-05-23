@@ -25,3 +25,6 @@ package-lock.json
 # Archivos de referencia
 Configuration-Files/
 
+# Configuración de editor (no es código fuente)
+.vscode/
+
