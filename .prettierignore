@@ -19,3 +19,9 @@ npm-debug.log*
 # Archivos generados automáticamente
 package-lock.json
 
+# Archivos de infraestructura (GitHub Actions, templates)
+.github/
+
+# Archivos de referencia
+Configuration-Files/
+
