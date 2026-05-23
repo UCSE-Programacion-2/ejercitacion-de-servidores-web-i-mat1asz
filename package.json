@@ -12,12 +12,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
-  "keywords": [
-    "node",
-    "http",
-    "server",
-    "educational"
-  ],
+  "keywords": ["node", "http", "server", "educational"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
