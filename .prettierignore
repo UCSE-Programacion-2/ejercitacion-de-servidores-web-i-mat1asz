@@ -28,3 +28,6 @@ Configuration-Files/
 # Configuración de editor (no es código fuente)
 .vscode/
 
+# Documentación
+README.md
+
