@@ -29,22 +29,28 @@ describe('Pruebas del servidor HTTP', () => {
   });
 
   // Prueba para la ruta /cursos
-  test('GET /cursos debería devolver "Te interesan nuestros cursos. Vení a conocer la oferta!"', async () => {
-    const response = await request(server).get('/cursos');
-    expect(response.status).toBe(200);
-    expect(response.text).toBe('Te interesan nuestros cursos. Vení a conocer la oferta!');
-    expect(response.headers['content-type']).toMatch(/text\/plain/);
-    expect(response.headers['content-type']).toMatch(/charset=utf-8/);
-  });
+  test(
+    'GET /cursos debería devolver "Te interesan nuestros cursos. Vení a conocer la oferta!"',
+    async () => {
+      const response = await request(server).get('/cursos');
+      expect(response.status).toBe(200);
+      expect(response.text).toBe('Te interesan nuestros cursos. Vení a conocer la oferta!');
+      expect(response.headers['content-type']).toMatch(/text\/plain/);
+      expect(response.headers['content-type']).toMatch(/charset=utf-8/);
+    },
+  );
 
   // Prueba para la ruta /contacto
-  test('GET /contacto debería devolver "Si querés contactarnos, hacelo a este Email: :)"', async () => {
-    const response = await request(server).get('/contacto');
-    expect(response.status).toBe(200);
-    expect(response.text).toBe('Si querés contactarnos, hacelo a este Email: :)');
-    expect(response.headers['content-type']).toMatch(/text\/plain/);
-    expect(response.headers['content-type']).toMatch(/charset=utf-8/);
-  });
+  test(
+    'GET /contacto debería devolver "Si querés contactarnos, hacelo a este Email: :)"',
+    async () => {
+      const response = await request(server).get('/contacto');
+      expect(response.status).toBe(200);
+      expect(response.text).toBe('Si querés contactarnos, hacelo a este Email: :)');
+      expect(response.headers['content-type']).toMatch(/text\/plain/);
+      expect(response.headers['content-type']).toMatch(/charset=utf-8/);
+    },
+  );
 
   // Prueba para rutas no existentes
   test('GET /ruta-no-existente debería devolver 404 y un mensaje de error', async () => {

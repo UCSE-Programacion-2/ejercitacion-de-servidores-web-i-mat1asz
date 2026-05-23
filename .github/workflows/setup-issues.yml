@@ -1,6 +1,6 @@
 name: Setup Issues
 
-"on":
+on:
   push:
     branches:
       - main
