@@ -16,3 +16,6 @@ npm-debug.log*
 # Archivos de configuración
 .eslintrc.json
 
+# Archivos generados automáticamente
+package-lock.json
+
