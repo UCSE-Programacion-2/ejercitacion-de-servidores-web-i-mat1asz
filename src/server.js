@@ -8,8 +8,23 @@ const http = require('http');
  * @returns {http.Server} Instancia del servidor HTTP
  */
 function createServer() {
+  const routes = {
+    '/': 'Bienvenid@s! Gracias por tu visita.',
+    '/nosotros': 'Bienvenid@s a saber + de nosotros :)',
+    '/cursos': 'Te interesan nuestros cursos. Vení a conocer la oferta!',
+    '/contacto': 'Si querés contactarnos, hacelo a este Email: :)',
+  };
+
   const server = http.createServer((req, res) => {
-    /* Aquí la lógica del enrutador */
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+
+    if (routes[req.url] !== undefined) {
+      res.writeHead(200);
+      res.end(routes[req.url]);
+    } else {
+      res.writeHead(404);
+      res.end('No se ha encontrado la ruta ingresada.');
+    }
   });
 
   return server;
